@@ -24,15 +24,18 @@ Constraints:
 
 '''
 
-class Solution(object):
-    def isPalindrome(self, y):
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
         if x < 0:
-            return True
+            return False
         reversed_number = 0
-        number = x
+        original_number = x
         while x > 0:
             digit = x % 10
             x = x // 10
-            reversed_number == reversed_number * 10 + digit
+            reversed_number = reversed_number * 10 + digit
 
-        return number = reversed_number
+        return original_number == reversed_number
+y =int(input("Enter the number: "))
+sol = Solution()
+print(sol.isPalindrome(y))
